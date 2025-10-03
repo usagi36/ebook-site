@@ -11,9 +11,6 @@
     padding: 0;
     background-color: #f4f6f8;
     color: #333;
-    min-height: 100vh;         /* 画面全体を確保 */
-    display: flex;
-    flex-direction: column;    /* フッターを下固定 */
   }
 
   /* ヘッダー */
@@ -23,14 +20,12 @@
     text-align: center;
     padding: 100px 20px;
     position: relative;
-    z-index: 0;
   }
   header::after {
     content: "";
     position: absolute;
     top:0; left:0; right:0; bottom:0;
     background-color: rgba(0,0,0,0.5);
-    z-index: -1; /* ← フッターを隠さない */
   }
   header h1, header p {
     position: relative;
@@ -47,7 +42,6 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
-    flex: 1; /* ← これで本文部分が伸びる */
   }
 
   .card-link {
@@ -83,17 +77,28 @@
     transform: translateY(-50%) translateX(5px);
   }
 
-  /* フッター */
- 
-footer {
-  background-color: #2c3e50; /* 濃い帯 */
-  color: #fff;              /* 白抜き文字 */
-  text-align: center;
-  padding: 20px;
-  font-size: 0.9em;
-}
+  /* QRコード */
+  .button-container {
+    text-align: center;
+    margin: 50px 0;
+  }
 
-  
+  .button-container img.qr-code {
+    width: 120px;
+    height: auto;
+    display: inline-block;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  }
+
+  /* フッター */
+  footer {
+    background-color: #2c3e50;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9em;
+  }
 </style>
 </head>
 <body>
@@ -112,9 +117,12 @@ footer {
     <a href="step1.html" class="card-link">安心・安全な<br>サポート体制</a>
   </section>
 
+  <div class="button-container">
+    <img src="lineQR.jpg" alt="QRコード" class="qr-code">
+  </div>
+
   <footer>
     © 2025　株式会社味楽ウサギ出版社
   </footer>
 </body>
 </html>
-
