@@ -1,113 +1,83 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>電子書籍出版サービス｜社長向け</title>
-<style>
-  body {
-    font-family: "Helvetica Neue", Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f6f8;
-    color: #333;
-    min-height: 100vh;         /* 画面全体を確保 */
-    display: flex;
-    flex-direction: column;    /* フッターを下固定 */
-  }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>電子書籍出版サービス｜社長向け</title>
+  <style>
+    body {
+      font-family: "Helvetica Neue", Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f6f8;
+      color: #333;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
 
-  /* ヘッダー */
-  header {
-    background: url('https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=1950&q=80') center/cover no-repeat;
-    color: #fff;
-    text-align: center;
-    padding: 100px 20px;
-    position: relative;
-    z-index: 0;
-  }
-  header::after {
-    content: "";
-    position: absolute;
-    top:0; left:0; right:0; bottom:0;
-    background-color: rgba(0,0,0,0.5);
-    z-index: -1; /* ← フッターを隠さない */
-  }
-  header h1, header p {
-    position: relative;
-    z-index: 1;
-  }
-  header h1 { font-size: 3em; margin:0; }
-  header p { font-size:1.3em; margin-top:15px; }
+    header {
+      background-color: #2c3e50;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
 
-  /* リンクカードセクション */
-  .cards {
-    max-width: 900px;
-    margin: 50px auto;
-    padding: 0 20px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    flex: 1; /* ← これで本文部分が伸びる */
-  }
+    main {
+      flex: 1;
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
 
-  .card-link {
-    display: block;
-    background: linear-gradient(135deg, #6a11cb, #2575fc);
-    color: #fff;
-    text-decoration: none;
-    padding: 25px;
-    border-radius: 20px;
-    font-size: 1.1em;
-    font-weight: bold;
-    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
-    transition: all 0.3s ease;
-    position: relative;
-  }
+    h1 {
+      font-size: 1.8em;
+      margin-bottom: 20px;
+      color: #2c3e50;
+    }
 
-  .card-link::after {
-    content: "→";
-    position: absolute;
-    right: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 1.3em;
-    transition: transform 0.3s ease;
-  }
+    p {
+      line-height: 1.7;
+      margin-bottom: 20px;
+    }
 
-  .card-link:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-  }
+    .button {
+      display: inline-block;
+      background-color: #3498db;
+      color: #fff;
+      padding: 12px 24px;
+      text-decoration: none;
+      border-radius: 6px;
+      font-size: 1em;
+      transition: background 0.3s;
+    }
+    .button:hover {
+      background-color: #217dbb;
+    }
 
-  .card-link:hover::after {
-    transform: translateY(-50%) translateX(5px);
-  }
-
-  /* フッター */
-  footer {
-    background-color: #2c3e50;
-    color: #fff;
-    text-align: center;
-    padding: 20px;
-    font-size: 0.9em;
-  }
-</style>
+    footer {
+      background-color: #2c3e50;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9em;
+    }
+  </style>
 </head>
 <body>
   <header>
     <h1>電子書籍出版サービス</h1>
-    <p>社長の権威性アップとブランディングをサポート。<br>
-       出版と同時に世界中の読者に届き、グローバルに発信できます。</p>
   </header>
 
-  <section class="cards">
-    <a href="publish.html" class="card-link">出版に関わる全工程を<br>ワンストップで対応</a>
-    <a href="step3.html" class="card-link">章立て構成から原稿執筆、<br>デザインまでサポート</a>
-    <a href="step2.html" class="card-link">出版後のプロモーションも<br>安心してお任せ</a>
-    <a href="step4.html" class="card-link">社長向けに、権威性・ブランディング・集客を最大化</a>
-    <a href="step5.html" class="card-link">低価格で出版可能。<br>目的やご要望に応じた最適<br>なプランをご提案</a>
-    <a href="step1.html" class="card-link">安心・安全な<br>サポート体制</a>
-  </section>
+  <main>
+    <h1>ブランディングによる集客効果</h1>
+    <p>
+      電子書籍は、専門家としての権威性を確立する強力な手段です。
+      名刺代わりにもなり、あなたや会社の信頼性を可視化することで、
+      新たな顧客やビジネスパートナーとの出会いを促します。
+    </p>
+    <a href="#" class="button">詳しく見る</a>
+  </main>
 
   <footer>
     © 2025　株式会社味楽ウサギ出版社
