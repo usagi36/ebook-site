@@ -11,9 +11,9 @@
     padding: 0;
     background-color: #f4f6f8;
     color: #333;
-    min-height: 100vh; /* 画面いっぱい確保 */
+    min-height: 100vh;         /* 画面全体を確保 */
     display: flex;
-    flex-direction: column;
+    flex-direction: column;    /* フッターを下固定 */
   }
 
   /* ヘッダー */
@@ -30,7 +30,7 @@
     position: absolute;
     top:0; left:0; right:0; bottom:0;
     background-color: rgba(0,0,0,0.5);
-    z-index: -1; /* ← フッターを隠さないように調整 */
+    z-index: -1; /* ← フッターを隠さない */
   }
   header h1, header p {
     position: relative;
@@ -47,7 +47,7 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
-    flex: 1; /* ← フッターを下に押しやる */
+    flex: 1; /* ← これで本文部分が伸びる */
   }
 
   .card-link {
