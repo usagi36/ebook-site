@@ -17,7 +17,7 @@
     main {
       max-width: 550px; /* 文章幅を少し狭く */
       margin: 60px auto;
-      background:rgba(245, 230, 230, 0.881);
+      background: rgba(245, 230, 230, 0.881);
       padding: 40px;
       border-radius: 12px;
       box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
@@ -61,20 +61,23 @@
       margin-bottom: 20px;
     }
 
+    /* ホームボタン（中央揃え＆青緑系に統一） */
     .home-button {
-      display: inline-block;
-      margin-top: 30px;
+      display: block;          /* ブロック要素にして中央揃え可能に */
+      width: max-content;      /* 内容に合わせて幅調整 */
+      margin: 30px auto 0 auto; /* 上マージン30px、左右自動で中央 */
       padding: 12px 25px;
-      background-color: #1e90ff;
+      background-color: #2c7a7b; /* 青緑系 */
       color: #fff;
-      text-decoration: none;
-      border-radius: 8px;
       font-weight: bold;
+      border-radius: 8px;
+      text-align: center;
+      text-decoration: none;
       transition: background-color 0.3s ease;
     }
 
     .home-button:hover {
-      background-color: #0d6efd;
+      background-color: #205f60; /* ホバー時は濃い青緑 */
     }
 
     footer {
@@ -114,7 +117,7 @@
       <img src="profileimage.jpg" alt="本" class="right">
     </div>
 
-    <p>初めまして、株式会社味楽ウサギ出版社の代表、月野翠子(著者名)と申します。<br>
+    <p>初めまして、株式会社味楽ウサギ出版社の代表、月野翠子(著者名)と申します。<br> 
     私が本の執筆を始めたのは2年ほど前です。「どうすれば本が読まれ、売れるのか」を学ぶため、様々な出版の講習やコミュニティに積極的に参加してきました。試行錯誤を重ねる中で、優秀なライターさんや販売のプロ、敏腕マーケッターの方々と出会い、ネットワークを築くことができました。</p>
 
     <p>その結果、電子書籍という形で自分の本をベストセラーにすることに成功しました。<br>
