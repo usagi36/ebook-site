@@ -15,24 +15,38 @@
 
   /* ヘッダー */
   header {
-    background: url('titleimage.jpg') center/cover no-repeat;
+    background: url('titleimage.jpg') center/cover no-repeat; /* ← PCでは今まで通りcover */
     color: #fff;
     text-align: center;
     padding: 100px 20px;
     position: relative;
   }
+
   header::after {
     content: "";
     position: absolute;
     top:0; left:0; right:0; bottom:0;
     background-color: rgba(0,0,0,0.5);
   }
+
   header h1, header p {
     position: relative;
     z-index: 1;
   }
   header h1 { font-size: 3em; margin:0; }
   header p { font-size:1.3em; margin-top:15px; }
+
+  /* 🌟スマホ用調整（768px以下）*/
+  @media (max-width: 768px) {
+    header {
+      background-size: contain; /* ← 全体が見切れないように */
+      background-position: center top;
+      background-color: #000; /* ← 余白が出た時の背景色 */
+      padding: 60px 15px; /* ← スマホでは余白を少し減らす */
+    }
+    header h1 { font-size: 2em; }
+    header p { font-size: 1.1em; }
+  }
 
   /* リンクカードセクション */
   .cards {
@@ -81,10 +95,6 @@
   .qr-section {
     text-align: center;
     margin: 60px 0 20px;
-  }
-  .qr-section h2 {
-    font-size: 1.5em;
-    margin-bottom: 15px;
   }
   .qr-section img {
     width: 130px;
