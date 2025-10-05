@@ -85,6 +85,30 @@
     .back-button:hover {
       background-color: #205f60;
     }
+
+    /* --------------------------
+       レスポンシブ対応
+       スマホ（幅480px以下）で1列表示
+    --------------------------- */
+    @media (max-width: 480px) {
+      .benefits-grid {
+        grid-template-columns: 1fr; /* 1列に切り替え */
+        justify-items: center;      /* 各アイテム中央揃え */
+      }
+
+      .content {
+        flex-direction: column;     /* 文章と画像も縦並び */
+        align-items: center;
+      }
+
+      .text {
+        text-align: center;         /* スマホでは文章も中央揃え */
+      }
+
+      .content img {
+        max-width: 90%;             /* 画像を少し小さく調整 */
+      }
+    }
   </style>
 </head>
 <body>
