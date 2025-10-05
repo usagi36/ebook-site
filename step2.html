@@ -15,7 +15,7 @@
     }
 
     .container {
-      max-width: 600px;
+      max-width: 600px; /* 背景幅 */
       margin: 50px auto;
       padding: 30px 25px;
       background: #f2f1e5;
@@ -63,7 +63,7 @@
       justify-content: center; /* 全体中央揃え */
       justify-items: start;   /* 各セル内左揃えで◆位置を揃える */
       gap: 10px 40px;         /* 行間10px、列間40px */
-      margin-top: 0;
+      margin-top: 20px;
     }
 
     .benefits-grid div {
@@ -86,27 +86,21 @@
       background-color: #205f60;
     }
 
-    /* --------------------------
-       レスポンシブ対応
-       スマホ（幅480px以下）で1列表示
-    --------------------------- */
+    /* スマホ対応 */
     @media (max-width: 480px) {
       .benefits-grid {
-        grid-template-columns: 1fr; /* 1列に切り替え */
-        justify-items: center;      /* 各アイテム中央揃え */
+        grid-template-columns: 1fr; /* 1列表示 */
+        justify-items: center;      /* 中央揃え */
       }
-
       .content {
-        flex-direction: column;     /* 文章と画像も縦並び */
+        flex-direction: column;
         align-items: center;
       }
-
       .text {
-        text-align: center;         /* スマホでは文章も中央揃え */
+        text-align: center;
       }
-
       .content img {
-        max-width: 90%;             /* 画像を少し小さく調整 */
+        max-width: 90%;
       }
     }
   </style>
