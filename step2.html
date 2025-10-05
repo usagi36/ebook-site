@@ -38,10 +38,11 @@
       gap: 20px;
       flex-wrap: wrap;
       justify-content: center;
+      margin-bottom: 20px;
     }
 
     .content img {
-      max-width: 270px; /* ← 写真を少し小さく */
+      max-width: 270px;
       border-radius: 12px;
       box-shadow: 0 4px 8px rgba(0,0,0,0.1);
       flex-shrink: 0;
@@ -55,9 +56,18 @@
       margin: 0 auto;
     }
 
-    .highlight {
-      color: red;
-      text-decoration: underline double red;
+    /* 2列2行中央揃え＋◆の位置揃え */
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(2, auto);
+      justify-content: center; /* 全体中央揃え */
+      justify-items: start;   /* 各セル内左揃えで◆位置を揃える */
+      gap: 10px 40px;         /* 行間10px、列間40px */
+      margin-top: 0;
+    }
+
+    .benefits-grid div {
+      white-space: nowrap; /* 折り返し防止 */
     }
 
     .back-button {
@@ -85,12 +95,18 @@
         <p>
           Amazonランキング1位の獲得を目指し、プロモーションまで責任を持って対応いたします。<br>
           実際に弊社から出版された書籍はベストセラーを達成しており、他社にはない実績と自信をもって、皆様に安心してご出版いただいております。<br>
-          出版を通じて得られる下記の効果についても、自信をもってお伝えいたします。<br><br>
-          ◆権威性の確立　　◆ご自身のブランディング<br>
-          ◆集客力の向上　　◆収益化の実現
+          出版を通じて得られる下記の効果についても、自信をもってお伝えいたします。
         </p>
       </div>
       <img src="image4.jpg" alt="ベストセラー写真">
+    </div>
+
+    <!-- 中央揃えで2列2行、◆の位置を揃える -->
+    <div class="benefits-grid">
+      <div>◆権威性の確立</div>
+      <div>◆ご自身のブランディング</div>
+      <div>◆集客力の向上</div>
+      <div>◆収益化の実現</div>
     </div>
 
     <!-- ホームに戻るボタン -->
