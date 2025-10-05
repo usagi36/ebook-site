@@ -77,10 +77,26 @@
     transform: translateY(-50%) translateX(5px);
   }
 
+  /* QRコードセクション */
+  .qr-section {
+    text-align: center;
+    margin: 60px 0 20px;
+  }
+  .qr-section h2 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+  }
+  .qr-section img {
+    width: 130px;
+    height: 130px;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+  }
+
   /* お問い合わせ */
   .contact {
     text-align: center;
-    margin: 40px 0;
+    margin: 30px 0 50px;
     font-size: 1.1em;
   }
   .contact a {
@@ -101,6 +117,15 @@
     font-size: 0.9em;
     margin-top: 50px;
   }
+
+  footer a {
+    color: #fff;
+    text-decoration: none;
+  }
+  footer a:hover {
+    text-decoration: underline;
+    color: #1abc9c;
+  }
 </style>
 </head>
 <body>
@@ -119,6 +144,12 @@
     <a href="step1.html" class="card-link">安心・安全な<br>サポート体制</a>
   </section>
 
+  <!-- QRコード -->
+  <section class="qr-section">
+    <img src="QR.jpg" alt="LINE QRコード">
+  </section>
+
+  <!-- お問い合わせ -->
   <section class="contact">
     <p>📩 お問い合わせはこちら：  
       <a href="mailto:usagi.36q@gmail.com">usagi.36q@gmail.com</a>
@@ -126,7 +157,8 @@
   </section>
 
   <footer>
-    © 2025　株式会社味楽ウサギ出版社
+    © 2025　
+    <a href="profile.html">株式会社味楽ウサギ出版社</a>
   </footer>
 </body>
 </html>
