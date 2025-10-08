@@ -18,7 +18,7 @@
     background: url('titleimage.jpg') center/cover no-repeat;
     color: #fff;
     text-align: center;
-    padding: 100px 20px;
+    padding: 100px 20px 120px;
     position: relative;
   }
   header::after {
@@ -34,11 +34,47 @@
   header h1 { font-size: 3em; margin:0; }
   header p { font-size:1.3em; margin-top:15px; }
 
-  /* スマホ用：画像が見切れないように */
+  /* 帯の下端（挿絵下）に配置するウサギ出版社 */
+  .publisher-bottom {
+    position: absolute;
+    bottom: 10px;
+    right: 25px;
+    z-index: 2;
+    opacity: 0.95;
+  }
+
+  .publisher-bottom a {
+    color: #fff;
+    font-size: 1.6em;
+    font-weight: bold;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .publisher-bottom a:hover {
+    text-decoration: underline;
+    color: #ffccff;
+  }
+
+  .publisher-bottom img {
+    width: 60px;
+    height: auto;
+  }
+
+  /* スマホ対応 */
   @media (max-width: 600px) {
     header {
       background-size: contain;
-      background-color: #000; /* 余白が出る部分を自然に見せる */
+      background-color: #000;
+      padding-bottom: 90px;
+    }
+    .publisher-bottom a {
+      font-size: 1.2em;
+    }
+    .publisher-bottom img {
+      width: 40px;
     }
   }
 
@@ -85,7 +121,7 @@
     transform: translateY(-50%) translateX(5px);
   }
 
- /* お問い合わせ */
+  /* お問い合わせ */
   .contact {
     text-align: center;
     margin: 30px 0 50px;
@@ -109,7 +145,7 @@
   }
 
   .contact a {
-    color: #2575fc;
+    color: #b300a1;
     font-weight: bold;
     text-decoration: none;
   }
@@ -127,14 +163,6 @@
     margin-top: 50px;
   }
 
-  footer a {
-    color: #fff;
-    text-decoration: none;
-  }
-  footer a:hover {
-    text-decoration: underline;
-    color: #1abc9c;
-  }
 </style>
 </head>
 <body>
@@ -142,6 +170,14 @@
     <h1>電子書籍出版サービス</h1>
     <p>社長の権威性アップとブランディングをサポート。<br>
        出版と同時に世界中の読者に届き、グローバルに発信できます。</p>
+
+    <!-- ウサギ出版社（ロゴ＋リンク） -->
+    <div class="publisher-bottom">
+      <a href="profile.html">
+        <img src="usagi.png" alt="ウサギ出版社ロゴ">
+        ウサギ出版社
+      </a>
+    </div>
   </header>
 
   <section class="cards">
@@ -153,24 +189,17 @@
     <a href="step1.html" class="card-link">安心・安全な<br>サポート体制</a>
   </section>
 
- <!-- お問い合わせ -->
   <section class="contact">
-    <p> お問い合わせはこちら：  <a href="profile.html">ウサギ出版社</a>
-    </p>
+    <p>お問い合わせはこちら：</p>
   </section>
   
-  <!-- QRコード -->
   <section class="qr-section">
-    <img src="QR.jpg" alt="LINE QRコード">
+    <img src="QR.jpg" alt="LINE QRコード"><br><br>
     <a href="mailto:usagi.36q@gmail.com">usagi.36q@gmail.com</a>
   </section>
 
   <footer>
-    © 2025　
-    <a href="profile.html">株式会社味楽</a>
+    © 2025　株式会社味楽
   </footer>
 </body>
 </html>
-
-
-
