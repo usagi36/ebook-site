@@ -3,13 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>画像ギャラリー</title>
+  <title>特定商取引法に基づく表記</title>
   <style>
     body {
       margin: 0;
       padding: 0;
       background-color: #f8f8f8;
       text-align: center;
+      font-family: "Hiragino Sans", "Noto Sans JP", sans-serif;
     }
     img {
       width: 80%;
@@ -19,11 +20,28 @@
       border-radius: 10px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     }
+    .back-button {
+      display: inline-block;
+      margin: 40px auto;
+      padding: 10px 30px;
+      background-color: #4CAF50;
+      color: white;
+      text-decoration: none;
+      border-radius: 25px;
+      font-size: 16px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      transition: background-color 0.3s ease;
+    }
+    .back-button:hover {
+      background-color: #45a049;
+    }
   </style>
 </head>
 <body>
   <img src="exp1.jpg" alt="画像1">
   <img src="exp2.jpg" alt="画像2">
   <img src="exp3.jpg" alt="画像3">
+
+  <a href="index.html" class="back-button">← ホームに戻る</a>
 </body>
 </html>
